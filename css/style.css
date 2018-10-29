@@ -8,20 +8,27 @@ body {
   background-color: transparent;
   font-size: 14px;
   font-family: "Open Sans", "Source Sans Pro", sans-serif;
+  /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+  /* ----------- iPhone X ----------- */
+  /*Galaxy S7 and S8 */
+  /*Note9*/
 }
 body .slider {
-  height: 90vh;
-  width: auto;
+  height: 100vh;
+  width: 100vw;
   color: white;
   display: flex;
   flex-direction: column;
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../images/Warstwa1.png");
 }
 body .slider .nav {
   background-color: transparent;
+}
+body .slider .nav #menuicon {
+  display: none;
 }
 body .slider .nav #logo {
   float: left;
@@ -42,13 +49,13 @@ body .slider .nav #menu {
   display: inline;
 }
 body .slider .nav #menu li {
+  color: white;
   display: inline;
   margin: 20px;
   position: relative;
   text-transform: uppercase;
 }
 body .slider .nav #menu li a {
-  color: white;
   text-decoration: none;
 }
 body .slider .nav #menu li a:visited {
@@ -60,10 +67,31 @@ body .slider .nav #menu li a:hover {
   border-bottom: 1px solid #d63f04;
   padding-bottom: 20px;
 }
-body .slider .nav #menu::after {
+body .slider .nav::after {
   content: "";
   display: table;
   clear: both;
+}
+body .slider .arrow {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: fixed;
+  border-radius: 5px;
+}
+body .slider .arrow-right {
+  margin-left: 85%;
+  margin-top: 20%;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(153, 154, 155, 0.5);
+}
+body .slider .arrow-left {
+  margin-left: 14%;
+  margin-top: 20%;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(153, 154, 155, 0.5);
 }
 body .slider .headings {
   font-family: "Open Sans";
@@ -77,17 +105,23 @@ body .slider .headings h1 {
   margin-top: 10%;
   font-weight: lighter;
   font-size: 24px;
+  text-align: center;
 }
 body .slider .headings h2 {
   margin: 10px;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 72px;
+  text-align: center;
 }
 body .slider .headings .welcometext {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 40px;
+  width: 60%;
+}
+body .slider .headings .mobile {
+  display: none;
 }
 body .slider .headings .buttons {
   width: 100%;
@@ -97,21 +131,8 @@ body .slider .headings .buttons {
   padding-left: 30%;
   padding-right: 30%;
 }
-body .slider .headings .buttons #colorbtn {
-  background-color: #d63f04;
-  border: none;
+body .slider .headings .buttons button {
   margin-right: 20px;
-  padding: 10px 20px;
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  color: white;
-  font-weight: bold;
-  font-size: 12px;
-  text-transform: uppercase;
-  border-radius: 5px;
-}
-body .slider .headings .buttons #transbtn {
   background-color: transparent;
   border: 1px solid white;
   padding: 10px 20px;
@@ -124,11 +145,185 @@ body .slider .headings .buttons #transbtn {
   text-transform: uppercase;
   border-radius: 5px;
 }
+body .slider .headings .buttons button a:hover {
+  background-color: #d63f04;
+  border: none;
+}
+body .slider .headings #anchor {
+  padding-right: 7%;
+}
+body .slider .headings #anchor img {
+  margin-top: 3%;
+  position: absolute;
+  z-index: 999;
+}
 body .columns {
   background-color: white;
-  height: 30vh;
-  -webkit-clip-path: polygon(51% 53%, 100% 2%, 100% 59%, 100% 100%, 0 100%, 0 57%, 0 2%);
-  clip-path: polygon(51% 53%, 100% 2%, 100% 59%, 100% 100%, 0 100%, 0 57%, 0 2%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 8%;
+  width: 100%;
+  height: 40%;
+  -webkit-clip-path: polygon(50% 28%, 100% 0, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 28%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+body .columns .column {
+  width: 15%;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .columns .column h3 {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  height: 30%;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+body .columns .column h3 a {
+  color: #454647;
+  text-decoration: none;
+}
+body .columns .column h3 a:hover {
+  color: #d63f04;
+  border-bottom: 1px solid #d63f04;
+  padding-bottom: 20px;
+}
+body .columns .column p {
+  color: #454647;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+}
+body .columns .column .icon {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #454647;
+}
+body .columns .column .icon .icons {
+  padding: 20px;
+}
+body .columns .column .icon #glasses {
+  padding: 25px;
+}
+body .columns .column .icon #light {
+  padding: 15px;
+}
+@media (min-width: 375px) and (max-width: 667px) {
+  body .slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  body .slider .arrow {
+    display: none;
+  }
+  body .slider .nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10%;
+  }
+  body .slider .nav #menuicon {
+    display: inline;
+    font-size: 28px;
+    direction: rtl;
+    padding: 2% 2% 0 0;
+  }
+  body .slider .nav #logo {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+  }
+  body .slider .nav #menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 50%;
+    margin-right: 0;
+    margin-left: 60%;
+    background: white;
+    width: 40%;
+    position: fixed;
+    z-index: 999;
+  }
+  body .slider .nav #menu #menu li {
+    display: none;
+  }
+  body .slider .nav #menu #menu li li:hover {
+    color: #d63f04;
+    background-color: rgba(153, 154, 155, 0.5);
+  }
+  body .slider .headings {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  body .slider .headings h1 {
+    font-size: 18px;
+  }
+  body .slider .headings h2 {
+    font-size: 40px;
+  }
+  body .slider .headings .welcometext.mobile {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  body .slider .headings .welcometext.pc {
+    display: none;
+  }
+  body .slider .headings .buttons {
+    width: 100%;
+    padding: 10%;
+  }
+  body .slider .headings .buttons button {
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+  }
+  body .slider .headings .buttons #transbtn {
+    display: none;
+  }
+  body .slider .headings #anchor {
+    padding-right: 25%;
+  }
+  body .slider .headings #anchor img {
+    margin-top: 10%;
+    position: absolute;
+    z-index: 999;
+  }
+  body .slider .columns {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    padding-top: 30%;
+    -webkit-clip-path: polygon(50% 9%, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 9%, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+  body .slider .columns .column {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .slider .columns .column h3 {
+    padding-bottom: 10%;
+  }
+  body .slider .columns .column .icon {
+    margin-top: 10%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

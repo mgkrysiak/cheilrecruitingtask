@@ -210,7 +210,7 @@ body {
         font-family: 'Source Sans Pro', sans-serif;
         text-align: center;
       }
-      
+
       .icon {
         display: flex;
         justify-content: center;
@@ -234,7 +234,7 @@ body {
   }
 
   /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-  @media (min-width: 375px) and (max-width: 667px) {
+  @media (min-width: 360px) and (max-width: 812px) {
     .slider {
       display: flex;
       flex-direction: column;
@@ -366,10 +366,4 @@ body {
       }
     }
   }
-  /* ----------- iPhone X ----------- */
-  @media (min-width: 375px) and (max-width: 812px) {}
-  /*Galaxy S7 and S8 */
-  @media (min-width: 360px) and (max-width : 640px) {}
-  /*Note9*/
-  @media (min-width: 414px) and (max-width: 767px) {}
 };

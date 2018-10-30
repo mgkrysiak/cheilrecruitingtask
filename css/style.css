@@ -9,9 +9,6 @@ body {
   font-size: 14px;
   font-family: "Open Sans", "Source Sans Pro", sans-serif;
   /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-  /* ----------- iPhone X ----------- */
-  /*Galaxy S7 and S8 */
-  /*Note9*/
 }
 body .slider {
   height: 100vh;
@@ -215,7 +212,7 @@ body .columns .column .icon #glasses {
 body .columns .column .icon #light {
   padding: 15px;
 }
-@media (min-width: 375px) and (max-width: 667px) {
+@media (min-width: 360px) and (max-width: 812px) {
   body .slider {
     display: flex;
     flex-direction: column;
